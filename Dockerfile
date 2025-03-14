@@ -16,3 +16,9 @@ EXPOSE 3000
 
 # React серверін іске қосу
 CMD ["npm", "start"]
+
+# Install dependencies
+RUN npm install
+
+# Install Husky hooks
+RUN npx husky install
