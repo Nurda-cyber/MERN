@@ -2,9 +2,11 @@
   "name": "backend",
   "version": "1.0.0",
   "description": "",
+  "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js"
   },
   "keywords": [],
   "author": "",
@@ -13,7 +15,10 @@
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
-    "mongoose": "^8.12.1"
+    "loglevel": "^1.9.2",
+    "mongoose": "^8.12.1",
+    "morgan": "^1.10.0",
+    "winston": "^3.17.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.8.0",
@@ -24,10 +29,13 @@
     "globals": "^16.0.0",
     "husky": "^9.1.7",
     "lint-staged": "^15.4.3",
+    "nodemon": "^3.1.9",
     "prettier": "^3.5.3"
   },
   "lint-staged": {
-  "*.js": ["eslint --fix", "prettier --write"]
-}
-
+    "*.js": [
+      "eslint --fix",
+      "prettier --write"
+    ]
+  }
 }
